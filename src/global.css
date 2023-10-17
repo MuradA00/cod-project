@@ -1,0 +1,112 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.cdnfonts.com/css/hubot-sans');
+
+@font-face {
+    font-family: 'Mona';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/Mona-Sans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mona';
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/Mona-Sans-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Mona';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/Mona-Sans-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Integral';
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/IntegralCF-Regular.woff2') format('woff');
+}
+@font-face {
+    font-family: 'Integral';
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url('assets/fonts/IntegralCF-Bold.woff') format('woff');
+}
+
+:root {
+    --container-w: 1240px;
+    --container-px: 1rem;
+    --trans-100-ease: 100ms ease;
+    --trans-200-ease: 200ms ease;
+    --trans-300-ease: 300ms ease;
+    --trans-400-ease: 400ms ease;
+    --trans-500-ease: 500ms ease;
+    --trans-600-ease: 600ms ease;
+}
+body {
+    color: #fff;
+    background-color: #000;
+    font-size: 16px;
+}
+#root {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+.container {
+    max-width: calc(var(--container-w) + (var(--container-px) * 2));
+    width: 100%;
+    padding: 0 var(--container-px);
+    margin-inline: auto;
+}
+.image-shape {
+    clip-path: polygon(0% 15%, 0 0, 15% 0%, 92% 0, 100% 11%, 100% 34%, 96% 34%, 96% 61%, 100% 61%, 100% 100%, 28% 100%, 0 100%);
+}
+.button-primary { 
+    background-image: url('./assets/images/bg-cta-button.png');
+    background-size: 100% 100%;
+}
+.home {
+    background: url('./assets/images/bg-home.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+@media only screen and (max-width: 768px) {
+    .home {background-position: center;}
+    :root {--container-px: 12px;}
+} 
+.trans-100 {
+    transition: var(--trans-100-ease);
+}
+.trans-200 {
+    transition: var(--trans-200-ease);
+}
+.trans-300 {
+    transition: var(--trans-300-ease);
+}
+.trans-400 {
+    transition: var(--trans-400-ease);
+}
+.trans-500 {
+    transition: var(--trans-500-ease);
+}
+.trans-600 {
+    transition: var(--trans-600-ease);
+}
+.heading {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Hubot', sans-serif;
+}
