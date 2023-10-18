@@ -11,14 +11,14 @@ import { starIcon } from '../../assets/images';
 
 const Slider = () => {
 
-    const swiperParams = {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        direction: 'horizontal',
-        centeredSlides: true,
-        initialSlide: Math.floor(sliderData.length  / 2),
-        speed: 600
-    }
+    // const swiperParams = {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 16,
+    //     direction: 'horizontal',
+    //     centeredSlides: true,
+    //     initialSlide: Math.floor(sliderData.length  / 2),
+    //     speed: 600
+    // }
 
     return (
         <section className=' pt-[72px] pb-28 bg-dark ms:pb-20 ms:pt-12 slider'>
@@ -27,7 +27,7 @@ const Slider = () => {
                     Testimonials
                 </h5>
             </div>
-            <Swiper {...swiperParams} className='flex pt-28 pb-28'> 
+            <Swiper className='flex pt-28 pb-28' slidesPerView={'auto'} spaceBetween={16} direction='horizontal' centeredSlides={true} speed={600} initialSlide={Math.floor(sliderData.length / 2)}> 
                 {
                     sliderData.map((slide, index) => (
                         <SwiperSlide  key={slide.id} className='trans-300 w-[340px] min-h-[550px] ss:w-[260px] ss:min-h-[440px] bg-black bg-cover bg-no-repeat bg-center flex items-end py-[1.75rem] px-6 ms:px-4' style={{backgroundImage:`url(${slide.bg})`}}>
