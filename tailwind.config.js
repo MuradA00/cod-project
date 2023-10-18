@@ -459,7 +459,9 @@ export default {
       backgroundImage: {
         'main-gradient': 'linear-gradient(90deg, #454545 0%, #262627 100%)',
         'home-gradient': 'linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%)',
-        'home-players-bar-gradient': 'linear-gradient(-50deg, rgba(255,191,132,.3), transparent)'
+        'home-players-bar-gradient': 'linear-gradient(-50deg, rgba(255,191,132,.3), transparent)',
+        'video-overlay-gradient': 'linear-gradient(0deg, rgba(85, 85, 85, 0.20) 0%, rgba(85, 85, 85, 0.20) 100%)',
+        'slide-gradient': 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)'
       },
       fontFamily: {
         mona: ['Mona', 'sans-serif'],

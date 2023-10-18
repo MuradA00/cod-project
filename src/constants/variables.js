@@ -1,4 +1,4 @@
-import { fb, twitter, linkedin, servCardImageGoldenSkull, servCardImageNuclear, servCardImageGreenSkull } from "../assets/images";
+import { fb, twitter, linkedin, servCardImageGoldenSkull, servCardImageNuclear, servCardImageGreenSkull, bgSlide1, bgSlide2, bgSlide3, bgSlide4, bgSlide5, sectionImage } from "../assets/images";
 
 export const footerLinks = [
     {
@@ -134,4 +134,61 @@ export const serviceFilterBtns = [
         id: 7,
         btnName: 'WEAPONS'
     },
+]
+
+export const sliderData = [
+    {
+        id: 0,
+        bg: bgSlide1,
+        name: 'Usman Zafar',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a diam at neque lobortis tempor. Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar',
+        rate: 1
+    },
+    {
+        id: 1,
+        bg: bgSlide2,
+        name: 'Usman Zafar',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a diam at neque lobortis tempor. Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar',
+        rate: 2
+    },
+    {
+        id: 2,
+        bg: bgSlide3,
+        name: 'Usman Zafar',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a diam at neque lobortis tempor. Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar',
+        rate: 3
+    },
+    {
+        id: 3,
+        bg: bgSlide4,
+        name: 'Usman Zafar',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a diam at neque lobortis tempor. Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar',
+        rate: 4
+    },
+    {
+        id: 4,
+        bg: bgSlide5,
+        name: 'Usman Zafar',
+        info: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a diam at neque lobortis tempor. Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar Quisque dapibus, nisi eget iaculis commodo, turpis tellus vestibulum quam, vestibulum placerat arcu mauris vel sapien. Integer at pulvinar',
+        rate: 5
+    }
+]
+
+export const mainSectionData = [
+    {   id: 0,
+        heading: 'Heading here',
+        info: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis mi ut eros tincidunt ultricies. Aliquam porttitor massa ac tincidunt laoreet. Mauris sed velit sed ipsum rhoncus lacinia orem ipsum dolor sit amet, consectetur adipiscing elit. ',
+        bg: '#000',
+        image: sectionImage,
+        link: '#',
+        direction: 'row'
+    },
+    {   id: 1,
+        heading: 'Heading here',
+        info: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis mi ut eros tincidunt ultricies. Aliquam porttitor massa ac tincidunt laoreet. Mauris sed velit sed ipsum rhoncus lacinia orem ipsum dolor sit amet, consectetur adipiscing elit. ',
+        bg: '#000',
+        image: sectionImage,
+        link: '#',
+        direction: 'row-reverse'
+    }
 ]

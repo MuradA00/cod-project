@@ -15,7 +15,7 @@ const Services = () => {
     }
 
     return (
-        <section className='py-6'>
+        <section className='py-6 pb-24'>
         <div className='container flex flex-col gap-10'>
             <h4 className={`text-center ${css.headingLarge}`}>
                 Boosting Services
@@ -23,7 +23,7 @@ const Services = () => {
             <div className='max-w-[1040px] m-auto '>
                 <ul className='flex flex-wrap gap-5 ms:gap-2 justify-center ms:grid ms:grid-cols-3'>
                     {serviceFilterBtns.map((btn, index) => (
-                        <button key={btn.id} onClick={() => handleButtonClick(index)} className={`px-5 ms:px-2 flex justify-center opacity-[60%] min-h-[44px] ms:min-h-[38px] rounded-[0.25rem] trans-300 items-center ${activeBtn === index ? 'bg-y opacity-[100%]' : 'bg-transparent'}`}>
+                        <button key={btn.id} onClick={() => handleButtonClick(index)} className={`px-5 ms:px-2 flex justify-center opacity-[60%] min-h-[44px] ms:min-h-[38px] rounded-[0.25rem] trans-300 items-center ${activeBtn === index ? 'bg-y !opacity-[100%]' : 'bg-transparent'}`}>
                             <span className={`uppercase text-sm ms:text-xs ms:line-clamp-1 font-mona font-semibold ${activeBtn === index ? 'text-white' : 'text-[#FEFEFE]'}`}>
                                 {btn.btnName}
                             </span>

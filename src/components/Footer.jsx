@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="bg-footer">
             <div className='container'>
-                <div className='py-8 ms:py-[5.625rem]'>
+                <div className=' py-20 ms:py-[5.625rem]'>
                     <div className='relative flex flex-col gap-2'>
                         <div className='border-solid'>
                             <ul className='flex flex-wrap gap-x-9'>

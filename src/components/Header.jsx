@@ -1,9 +1,23 @@
 import { headerLogo, textFrame, topRect, bottomRect } from "../assets/images";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+
+    const [scrollState, setScrollState] = useState(false);
+
+    let scrollPosition = window.scrollY;
+
+    const scrollHandler = () => {
+        window.pageYOffset > scrollPosition ? setScrollState(true) : setScrollState(false);
+    }
+
+    window.addEventListener('scroll', () => {
+        scrollHandler();
+    })
+
     return (
-        <header className="fixed lg:top-[1rem] top-[2.5rem] left-0 w-full z-10">
+        <header className={`trans-300 fixed top-[2.5rem] lg:top-[1rem] left-0 w-full z-10 ${scrollState ? '-translate-y-[calc(100%+2.75rem)]' : 'translate-y-0'}`}>
             <div className="relative container m-[0.375rem]">
                 <div className="absolute w-[calc(100%-1.125rem)] pointer-events-none -top-[5px] h-5 left-1/2 -translate-x-1/2">
                     <img src={topRect} className="w-full" alt="" />

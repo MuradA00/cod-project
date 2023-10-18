@@ -14,6 +14,16 @@ import servCardImageGoldenSkull from './services-card-image-golden-skull.png'
 import cardHotIcon from './card-hot-icon.svg';
 import bgServCard from './bg-services-card.png';
 import purchasePlusIcon from './purchase-plus-icon.svg';
+import bgVideo from './bg-video.jpg';
+import playButton from './play-button.svg';
+import bgSlide1 from './bg-slide-1.jpg';
+import bgSlide2 from './bg-slide-2.jpg';
+import bgSlide3 from './bg-slide-3.jpg';
+import bgSlide4 from './bg-slide-4.jpg';
+import bgSlide5 from './bg-slide-5.jpg';
+import starIcon from './star-icon.svg';
+import sectionImageFrame from './section-image-frame.png';
+import sectionImage from './section-main-image.png';
 
 export {
     fb,
@@ -31,5 +41,15 @@ export {
     servCardImageGreenSkull,
     cardHotIcon,
     bgServCard,
-    purchasePlusIcon
+    purchasePlusIcon,
+    bgVideo,
+    playButton,
+    bgSlide1,
+    bgSlide2,
+    bgSlide3,
+    bgSlide4,
+    bgSlide5,
+    starIcon,
+    sectionImageFrame,
+    sectionImage
 };
