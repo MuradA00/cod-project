@@ -1,8 +1,6 @@
 import { sliderData } from '../../constants/variables';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import varStyle from '../../style';
-import style from './Slider.css';
-import SwiperCore from 'swiper'; 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -30,7 +28,7 @@ const Slider = () => {
             <Swiper className='flex pt-28 pb-28' slidesPerView={'auto'} spaceBetween={16} direction='horizontal' centeredSlides={true} speed={600} initialSlide={Math.floor(sliderData.length / 2)}> 
                 {
                     sliderData.map((slide, index) => (
-                        <SwiperSlide  key={slide.id} className='trans-300 w-[340px] min-h-[550px] ss:w-[260px] ss:min-h-[440px] bg-black bg-cover bg-no-repeat bg-center flex items-end py-[1.75rem] px-6 ms:px-4' style={{backgroundImage:`url(${slide.bg})`}}>
+                        <SwiperSlide  key={slide.id} className='trans-300 !w-[340px] min-h-[550px] ss:!w-[260px] ss:min-h-[440px] bg-black bg-cover bg-no-repeat bg-center flex items-end py-[1.75rem] px-6 ms:px-4' style={{backgroundImage:`url(${slide.bg})`}}>
                             <div className='trans-300 relative flex flex-col gap-4 z-[1] slider-info'>
                                 <div className='trans-300 font-hubot text-base uppercase font-black text-white leading-[100%]'>
                                     {slide.name}

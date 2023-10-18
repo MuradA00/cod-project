@@ -7,17 +7,13 @@ const Home = () => {
 
     const [height, setHeight] = useState(null);
 
-    window.addEventListener('load', () => {
-        setHeight(window.innerHeight);
-    })
-
     window.addEventListener('resize', () => {
         setHeight(window.innerHeight);
     })
 
     return (
         <section className="home relative before:absolute before:w-full before:h-full before:bg-home-gradient before:pointer-events-none">
-            <div style={{height: `${height === null ? window.innerHeight : height}px`}} className="container relative  flex items-center">
+            <div style={{height: `${height === null ? window.innerHeight : height}px`}} className="container relative min-h-[500px] flex items-center">
                 <div className="w-full">
                     <div className="max-w-[870px] lg-small:max-w-[600px] pt-[280px] lg:pt-48 ms:pb-10 w-full flex-1">
                         <h1 className="font-black font-hubot text-[52px] ms:!text-2xl lg:text-4xl drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] uppercase leading-[110%] mb-6 lg:mb-3">
@@ -40,7 +36,7 @@ const Home = () => {
                     </span>
                     <div className="bg-home-players-bar-gradient absolute -bottom-3 ms:-bottom-1 w-full mt-2 h-[1px]"></div>
                 </div>
-                <a href="#" className="absolute left-1/2 -translate-x-1/2 bottom-6 flex flex-col items-center gap-2 group ms:bottom-3">
+                <a href="#" className="absolute left-1/2 -translate-x-1/2 bottom-6 flex flex-col items-center gap-2 group ms:hidden">
                     <img src={scrollDown} className="trans-400 group-hover:translate-y-1 ms:h-8" alt="scroll-down-icon" />
                     <span className="ms:hidden group-hover:underline font-integral text-[10px] uppercase text-center">Scroll Down</span>
                 </a>
