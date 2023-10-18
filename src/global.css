@@ -70,7 +70,7 @@ main {
     margin-inline: auto;
 }
 .image-shape {
-    clip-path: polygon(0% 15%, 0 0, 15% 0%, 92% 0, 100% 11%, 100% 34%, 96% 34%, 96% 61%, 100% 61%, 100% 100%, 28% 100%, 0 100%);
+    clip-path: polygon(0% 15%, 0 0, 15% 0%, 94% 0, 100% 7%, 100% 9%, 100% 85%, 100% 100%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
 }
 .button-primary { 
     background-image: url('./assets/images/bg-cta-button.png');

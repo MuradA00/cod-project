@@ -20,7 +20,7 @@ const Video = () => {
                     <div className="absolute w-full h-full trans-300 top-0 left-0 before:absolute before:w-full before:h-full before:top-0 before:left-0 before:bg-video-overlay-gradient before:pointer-events-none bg-center bg-cover" style={{backgroundImage: `url(${bgVideo})`}}>
                     </div>
                     <div className={`absolute w-full h-full top-0 left-0 pointer-events-none trans-300 ${displayVideo ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TPACABQTHvM" title="TypeScript in React - COMPLETE Tutorial (Crash Course)" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe width="100%" height="100%" className=" !max-w-full" src="https://www.youtube.com/embed/TPACABQTHvM" title="TypeScript in React - COMPLETE Tutorial (Crash Course)" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                     </div>
                 </div>
             </div>

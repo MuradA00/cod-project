@@ -27,7 +27,7 @@ const Home = () => {
                         <Button text={'Get in touch'}/>
                     </div>
                 </div>
-                <div className="absolute right-4 bottom-[60px] flex gap-2 items-center ms:right-3 ms:bottom-14">
+                <div className="absolute right-4 bottom-[60px] flex gap-2 items-center ms:right-3 ms:bottom-6">
                     <div className="lg:hidden flex">
                         <img className="w-[100px]" src={emoijiImage} alt="emoiji-image" />
                     </div>

@@ -174,21 +174,22 @@ export const sliderData = [
     }
 ]
 
-export const mainSectionData = [
-    {   id: 0,
+export const sectionOneData = [
+    {   
         heading: 'Heading here',
         info: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis mi ut eros tincidunt ultricies. Aliquam porttitor massa ac tincidunt laoreet. Mauris sed velit sed ipsum rhoncus lacinia orem ipsum dolor sit amet, consectetur adipiscing elit. ',
         bg: '#000',
         image: sectionImage,
-        link: '#',
-        direction: 'row'
-    },
-    {   id: 1,
+        link: '#'
+    }
+]
+
+export const sectionSecondData = [
+    {   
         heading: 'Heading here',
         info: 'Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis mi ut eros tincidunt ultricies. Aliquam porttitor massa ac tincidunt laoreet. Mauris sed velit sed ipsum rhoncus lacinia orem ipsum dolor sit amet, consectetur adipiscing elit. ',
         bg: '#000',
         image: sectionImage,
-        link: '#',
-        direction: 'row-reverse'
+        link: '#'
     }
 ]
