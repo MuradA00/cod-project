@@ -1,0 +1,10 @@
+.bgOverlay {
+    background-image: url('../../../assets/images/main-grid-image.svg');
+    background-repeat: repeat-x;
+    background-size: contain;
+}
+@media (max-width: 1240px) {
+    .bgOverlay {
+        background-size: cover;
+    }
+}
