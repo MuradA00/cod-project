@@ -1,114 +1,57 @@
 import Input from "../../Input/Input";
+import DropdownComponent from "../../UI/Dropdown/DropdownComponent";
 
 const UserForm = () => {
-    const userForm = [
-      {
-        id: 0,
-        items: [
-          {
-            id: 0,
-            cols: [
-              {
-                id: 0,
-                input: { header: 'First name', placeholder: '' },
-              },
-              {
-                id: 1,
-                input: { header: 'Last name', placeholder: '' },
-              },
-            ],
-          },
-          {
-            id: 1,
-            textarea: { header: 'About', placeholder: '' },
-          },
-          {
-            id: 2,
-            cols: [
-              {
-                id: 0,
-                input: { header: 'Phone number', placeholder: '' },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 1,
-        heading: 'Email',
-        items: [
-          {
-            id: 0,
-            cols: [
-              {
-                id: 0,
-                input: { header: 'Email address', placeholder: '' },
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: 2,
-        heading: 'Password',
-        items: [
-          {
-            id: 0,
-            cols: [
-              {
-                id: 0,
-                input: { header: 'Current password', placeholder: '' },
-              },
-              {
-                id: 1,
-                input: { header: 'New password', placeholder: '' },
-              },
-            ],
-          },
-        ],
-      },
-    ];
+
+    const blockStyle = 'grid grid-cols-2 gap-5 ss:flex ss:flex-col' 
+    const borderStyle = 'pb-[1.875rem] border-b-[2px] border-gray-600 border-solid'
   
     return (
       <div>
         <div>
           <h1 className="text-[30px] font-bold mb-6">My Information</h1>
-          <div>
-            {userForm.map((block, index) => (
-              <div key={block.id} className={`pb-[1.875rem] mb-[1.875rem] ${index !== userForm.length - 1 ? 'border-b-[1px] border-solid border-gray-600' : ''}`}>
-                {block.heading && (
-                  <div className="text-lg font-bold mb-6">
-                    {block.heading}
-                  </div>
-                )}
-                <div className="flex flex-col gap-6">
-                  {block.items && block.items.map((item) => (
-                    <div key={item.id}>
-                      {item.cols && item.cols.length > 0 ? (
-                        <div className="grid grid-cols-2 gap-5">
-                          {item.cols.map((col) => (
-                            <div key={col.id}>
-                              <div className="flex flex-col gap-3">
-                                {col.input && col.input.header}
-                                <Input />
-                              </div>
-                              <div>
-                                {col.textarea && col.textarea.header}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      ) : (
-                        <div className="block">
-                          {item.input && item.input.header}
-                          {item.textarea && item.textarea.header}
-                        </div>
-                      )}
-                    </div>
-                  ))}
+          <div className={`flex flex-col gap-[1.875rem]`}>
+            <div className={`flex flex-col gap-6 ${borderStyle}`}>
+              <div className={`${blockStyle}`}>
+                <div>
+                  <Input label={'First name'} placeholder={''}/>
+                </div>
+                <div>
+                <Input label={'Last name'} placeholder={''}/>
                 </div>
               </div>
-            ))}
+              <div className="flex flex-col gap-3">
+                <span className="text-sm font-medium">
+                  About
+                </span>
+                <textarea name="" id="" className="rounded-[10px] outline-none p-5 resize-none bg-[#2C2B31] min-h-[112px]"></textarea>
+              </div>
+              <div>
+                <Input placeholder={''} label={'Phone number'} />
+              </div>
+            </div>
+            <div className={`${borderStyle}`}>
+              <div className="text-xl font-bold text-white mb-5">
+                Email
+              </div>
+              <div>
+                <Input placeholder={''} label={'Email address'} />
+              </div>
+            </div>
+            <div>
+              <div className="text-xl font-bold text-white mb-5">
+                Password
+              </div>
+              <div className={`${blockStyle}`}>
+                <div>
+                <span className="text-sm font-medium mb-3 block">Current password</span>
+                <DropdownComponent />
+                </div>
+                <div>
+                  <Input placeholder={''} label={'New password'} />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

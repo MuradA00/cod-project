@@ -253,7 +253,7 @@ export const logos = [
     },
     {
         id: 7,
-        loog: googlePayLogo
+        logo: googlePayLogo
     },
     {
         id: 8,

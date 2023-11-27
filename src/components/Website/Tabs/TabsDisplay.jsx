@@ -17,7 +17,7 @@ const TabsDisplay = (props) => {
                             }
                         </div>
                         <div>
-                            <div className="mb-3 font-extrabold">
+                            <div className="mb-3 font-extrabold font-sans">
                                 {content.listHeading}
                             </div>
                             <ul className="pl-[0.625rem] ss:flex ss:flex-col ss:gap-2">

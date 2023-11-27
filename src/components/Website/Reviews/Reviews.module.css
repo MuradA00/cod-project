@@ -1,0 +1,7 @@
+ .swiperArrow {
+    transition: all 300ms ease;
+ }
+ 
+ .swiperArrow:disabled {
+    background-color: #171717 !important;
+ } 

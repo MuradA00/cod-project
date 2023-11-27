@@ -3,14 +3,17 @@ import { Link } from "react-router-dom";
 import Overlay from "../.../../Overlay/Overlay.jsx";
 import varStyle from "../../../style";
 import { links, req, rows } from "../../../constants/variables.js";
-import { breadcrumbsArrrow, bronzeBadge, crossIcon, fragmentIcon, silverBadge, whiteCheckIcon, lineIcon } from "../../../assets/images";
+import { breadcrumbsArrrow, bronzeBadge, crossIcon, fragmentIcon, silverBadge, whiteCheckIcon, lineIcon, servCardImageGreenSkull } from "../../../assets/images";
 import CheckBox from "../CheckBox/CheckBox"
 import SliderInput from "../../UI/Slider/SliderInput.jsx";
+import styles from './../Services/Services.module.css';
+import cardStyle from './../Cards/Card.module.css';
 
 const Details = () => {
 
     let state = 'completed'; 
-
+    const innerCardLabelStyle = 'text-[13px] text-[#C3C3C3]';
+    const innerCardContent = 'text-lg text-[#D9D9D9] font-bold'
     const UserData = {
         order: 3453,
         customerName: 'Usman Zafar'
@@ -60,10 +63,57 @@ const Details = () => {
                             </div>
                         </div>
                         <div className="grid grid-cols-[0.53fr,0.47fr] gap-10 lg:flex lg:flex-col">
-                            <div>
-                                <div></div>
+                            <div className="flex flex-col gap-9">
+                                <div className={`${cardStyle.bgOrderCard}`}>
+                                    <div className="grid grid-cols-[.9fr_1fr] gap-5 ms:gap-3 ms:flex ms:flex-col min-h-[260px] py-[6px] pl-[6px] pr-3">
+                                        <div>
+                                            <div className={`h-full ${styles.cardShape} overflow-hidden rounded-[10px]`}>
+                                                <img className="h-full w-full" src={servCardImageGreenSkull} alt="" />
+                                            </div>
+                                        </div>
+                                        <div className="pt-5 flex flex-col ms:pt-0">
+                                            <div className="text-2xl font-hubot tracking-[-0.72px] font-bold ms:px-2">
+                                                WZ2 Rank Boosting
+                                            </div>
+                                            <div className="min-h-[66px]  ms:min-h-[48px]flex justify-center px-5 ms:px-2 flex-col mb-[10px]">
+                                                <span className={`${innerCardLabelStyle}`}>
+                                                    Email
+                                                </span>
+                                                <div className={`${innerCardContent}`}>
+                                                    usmanzafar089@gmail.com
+                                                </div>
+                                            </div>
+                                            <div className="flex">
+                                                <div className="min-h-[66px]  ms:min-h-[48px]flex justify-center px-5 ms:px-2 flex-col">
+                                                    <span className={`${innerCardLabelStyle}`}>
+                                                        Execution
+                                                    </span>
+                                                    <div className={`${innerCardContent}`}>
+                                                        Super
+                                                    </div>
+                                                </div>
+                                                <div className="min-h-[66px]  ms:min-h-[48px]flex justify-center px-5 ms:px-2 flex-col">
+                                                    <span className={`${innerCardLabelStyle}`}>
+                                                        Phone No.
+                                                    </span>
+                                                    <div className={`${innerCardContent}`}>
+                                                        +44 123 456 7890
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center justify-end gap-5 mt-auto">
+                                                <span className="text-sm text-[#6A6872] font-bold">
+                                                    Price
+                                                </span>
+                                                <span className="text-white text-[30px] font-bold">
+                                                    $55.55
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div>
-                                    <div className="mb-3 font-bold uppercase font-hubot">
+                                    <div className="mb-3 font-bold uppercase font-hubot border-solid border-t-[1px] border-gray-600 pt-6">
                                         Requirement :
                                     </div>
                                     <ul className="flex flex-col gap-1 pl-[10px]">
@@ -81,7 +131,7 @@ const Details = () => {
                                     </ul>
                                 </div>
                             </div>
-                            <CheckBox variant="larger" gap={30}>
+                            <CheckBox variant="larger" className={'!mt-0'} gap={30}>
                                 <div className="flex items-center gap-[30px] ms:gap-2">
                                     <div>
                                         <img className="h-[82px] ms:h-[2.75rem]" src={bronzeBadge} alt="" />

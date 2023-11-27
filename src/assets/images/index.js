@@ -97,6 +97,7 @@ import burgerIcon from './burgerIcon.svg';
 import closeIcon from './closeIcon.svg';
 import prevArrow from './prevArrow.svg';
 import nextArrow from './nextArrow.svg';
+import dropdownArrow from './dropdownArrow.png';
 
 export {
     fb,
@@ -136,6 +137,7 @@ export {
     mastercardLogo,
     trustlyLogo,
     sepaLogo,
+    googlePayLogo,
     cryptoLogo,
     idealLogo,
     skrillLogo,
@@ -146,7 +148,6 @@ export {
     visaLogo,
     americanExpressLogo,
     payopLogo,
-    googlePayLogo,
     unionPayLogo,
     bgMainOverlay,
     bgOrderCard,
@@ -197,5 +198,6 @@ export {
     burgerIcon,
     closeIcon,
     prevArrow,
-    nextArrow
+    nextArrow,
+    dropdownArrow
 };

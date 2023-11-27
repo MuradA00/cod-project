@@ -13,7 +13,7 @@ const AdminMain = () => {
                 <div className="flex flex-col gap-8 pl-[140px] lg:pl-[70px]">
                     <AdminStat/>
                     <AdminBox>
-                        <AdminPanel/>
+                        <AdminPanel panel={true} />
                         <AdminTable/>
                     </AdminBox>
                 </div>

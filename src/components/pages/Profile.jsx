@@ -25,7 +25,7 @@ const Profile = () => {
                                 <User/>
                             </div>
                         </div>
-                        <div className="flex justify-end mt-9 lg-small:mt-0 lg-small:justify-center">
+                        <div className="flex justify-end mt-9 lg-small:justify-center">
                             <Button text="Save">
                             </Button>
                         </div>

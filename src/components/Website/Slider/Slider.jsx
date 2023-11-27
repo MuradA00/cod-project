@@ -16,7 +16,7 @@ const Slider = () => {
                     Testimonials
                 </h5>
             </div>
-            <Swiper className='!flex !pt-28 !pb-28 ss:!pb-16' slidesPerView={'auto'} spaceBetween={16} direction='horizontal' centeredSlides={true} speed={600} initialSlide={Math.floor(sliderData.length / 2)}> 
+            <Swiper className='!flex !pt-28 !pb-28 ss:!pb-16' slidesPerView={'auto'} spaceBetween={16} direction='horizontal' centeredSlides={true} speed={600} initialSlide={Math.floor(sliderData.length/2)}> 
                 {
                     sliderData.map((slide, index) => (
                         <SwiperSlide  key={slide.id} className='trans-300 !w-[340px] min-h-[550px] ss:!w-[260px] ss:min-h-[440px] bg-black bg-cover bg-no-repeat bg-center !flex items-end py-[1.75rem] px-6 ms:px-4' style={{backgroundImage:`url(${slide.bg})`}}>
@@ -35,7 +35,7 @@ const Slider = () => {
                                             slide.rate > 0 ?
                                             [...Array(slide.rate)].map((_, index) => (                                            
                                                 <li key={index}>
-                                                    <img src={starIcon} alt="" />
+                                                    <img src={starIcon} alt="starIcon" />
                                                 </li>
                                             )) : 
                                             'No rating'

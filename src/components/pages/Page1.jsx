@@ -12,8 +12,11 @@ import Options from "../Options/Options";
 import Tabs from "../Website/Tabs/Tabs";
 import Input from "../Input/Input.jsx";
 import SliderInput from "../UI/Slider/SliderInput.jsx";
+import DropdownComponent from "../UI/Dropdown/DropdownComponent.jsx";
 
 const Page2 = () => {
+
+    const tableRowStyle = 'py-4 px-5 text-[#EFEFEF] text-sm ms:text-xs ms:px-2';
 
     const [activeButtons, setActiveButtons] = useState(Array(boostData.length));
 
@@ -40,6 +43,9 @@ const Page2 = () => {
                                             <div key={data.id}>
                                                 <div className="text-sm uppercase font-bold mb-[14px]">
                                                     {data.header && data.header}
+                                                </div>
+                                                <div>
+                                                    {data.dropdown && <DropdownComponent className={'border-solid !border-gray-600 border-[1px]'} defaultOption={'1-30'} />}
                                                 </div>
                                                 <div className={`flex flex-wrap gap-3 ${data.direction === 'col' ? 'flex-col items-start' : 'flex-row'}`}>
                                                     {
@@ -126,6 +132,99 @@ const Page2 = () => {
             <section className="mb-20">
                 <div className="container">
                     <Tabs/>
+                    <div className="mt-9">
+                        <div className="flex flex-col gap-9">
+                            <div>
+                            <div className="text-base font-sans font-extrabold text-white mb-4">
+                                ETA WITH EXECUTION OPTIONS:
+                            </div>
+                            <div className="rounded-2xl overflow-hidden w-fit">
+                                <table>
+                                    <thead>
+                                        <tr className="bg-dark">
+                                            {['Boost Method', 'Normal', 'Express', 'Super Express'].map((head, index) => (
+                                                <td key={index} className={`text-[15px] font-bold zinc-100 py-4 px-5 ms:text-xs ms:px-2 ${index === 0 ? 'text-center' : ''}`}>
+                                                    {head}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className="bg-[#18181D]">
+                                            {['Piloted', '1 hour 20 minutes per 100 SR', '1 hour 20 minutes per 100 SR', '1 hour per 100 SR'].map((row, index) => (
+                                                <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                    {row}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                        <tr className="bg-dark">
+                                            {['Sole Play', '1 hour 20 minutes per 100 SR', '1 hour 20 minutes per 100 SR', '1 hour per 100 SR'].map((row, index) => (
+                                                <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                    {row}
+                                                </td>
+                                            ))}
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
+                            <div className="">
+                                <div className="text-base font-sans font-extrabold text-white mb-4">
+                                    ETA WITH EXECUTION OPTIONS:
+                                </div>
+                                <div className="rounded-2xl overflow-hidden w-fit">
+                                    <table>
+                                        <thead>
+                                            <tr className="bg-dark">
+                                                {['Rank', 'Reward'].map((head, index) => (
+                                                    <td key={index} className={`text-[15px] font-bold zinc-100 py-4 px-5 ms:text-xs ms:px-2`}>
+                                                        {head}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr className="bg-[#18181D]">
+                                                {['5', '“Ranked Competitor” Operator Skin Pack, one “Home” version and one “Away” version awarded for both the Male and Female CDL Operator'].map((row, index) => (
+                                                    <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                        {row}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                            <tr className="bg-[#18181D]">
+                                                {['15', '“Ranked Competitor” Operator Skin Pack, one “Home” version and one “Away” version awarded for both the Male and Female CDL Operator'].map((row, index) => (
+                                                    <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                        {row}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                            <tr className="bg-[#18181D]">
+                                                {['30', '“Ranked Competitor” Operator Skin Pack, one “Home” version and one “Away” version awarded for both the Male and Female CDL Operator'].map((row, index) => (
+                                                    <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                        {row}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                            <tr className="bg-[#18181D]">
+                                                {['40', '“Ranked Competitor” Operator Skin Pack, one “Home” version and one “Away” version awarded for both the Male and Female CDL Operator'].map((row, index) => (
+                                                    <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                        {row}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                            <tr className="bg-[#18181D]">
+                                                {['50', '“Ranked Competitor” Operator Skin Pack, one “Home” version and one “Away” version awarded for both the Male and Female CDL Operator'].map((row, index) => (
+                                                    <td key={index} className={`${tableRowStyle} ${index === 0 ? 'text-center' : ''}`}>
+                                                        {row}
+                                                    </td>
+                                                ))}
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section>

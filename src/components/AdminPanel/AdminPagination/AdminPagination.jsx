@@ -19,11 +19,11 @@ const AdminPagination = (props) => {
         />
       </svg>
     );
-    const itemStyle = `bg-[${dynamicCl}] w-10 h-10 rounded-[0.5rem] flex justify-center items-center text-center ms:w-8 ms:h-8`;
+    const itemStyle = `bg-[${dynamicCl !== undefined ? dynamicCl : '#47464C'}] w-10 h-10 rounded-[0.5rem] flex justify-center items-center text-center ms:w-8 ms:h-8`;
     const itemTextStyle = 'leading-[100%] font-sans text-[13px] font-semibold text-white ms:text-xs';
   
     return (
-      <div className={`flex gap-[6px] mt-auto ml-auto ${props.spaced ? 'pr-5' : 'pr-0' } ms:mr-auto ms:pr-0`}>
+      <div className={`flex gap-[6px] mt-auto ml-auto ${props.spaced ? 'pr-5' : 'pr-0' } ms:mr-auto ms:pr-0 ${props.className}`}>
         <button className={itemStyle}>
             <div>
                 {arrow}

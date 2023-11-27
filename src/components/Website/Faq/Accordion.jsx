@@ -13,7 +13,7 @@ const Accordion = (props) => {
                             </div>
                             <div className="flex w-5 h-5 rounded-full border-solid border-[2px] border-white relative flex-shrink-0">
                                 <span className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-white w-[10px] h-[2px] block rounded-md absolute"></span>
-                                <span className={`top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 trans-300 bg-white w-[2px] h-[10px] block rounded-md absolute ${index === props.data ? 'scale-75 opacity-0' : 'scale-100 opacity-100'}`}></span>
+                                <span className={`top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 trans-300 bg-white w-[2px] h-[10px] block rounded-md absolute ${index === props.state ? 'scale-75 opacity-0' : 'scale-100 opacity-100'}`}></span>
                             </div>
                         </div>
                         {/* eslint-disable-next-line react/prop-types  */}

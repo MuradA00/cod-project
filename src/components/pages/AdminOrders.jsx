@@ -12,7 +12,7 @@ const AdminOrders = () => {
                 <Sidebar/>
                 <div className="flex flex-col gap-8 pl-[140px] lg:pl-[70px] flex-1">
                     <AdminBox>
-                        <AdminPanel/>
+                        <AdminPanel panel={true} />
                         <AdminTable/>
                         <AdminPagination bg={'#47464C'} />
                     </AdminBox>

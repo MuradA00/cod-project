@@ -4,6 +4,7 @@ import { nextArrow, prevArrow, starIcon } from "../../../assets/images";
 import { reviewsData } from "../../../constants/variables";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useRef } from "react";
+import styles from './Reviews.module.css';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -23,7 +24,7 @@ const Reviews = (props) => {
                     </h3>
                     <ul className="flex gap-[0.625rem] items-center">
                         {[0,1].map((_, index) => (
-                            <button key={index} ref={index !== 0 ? nextButton : prevButton} className="w-[66px] min-h-[1.625rem] rounded-xl flex justify-center items-center bg-[#171717]">
+                            <button key={index} ref={index !== 0 ? nextButton : prevButton} className={`w-[66px] min-h-[1.625rem] rounded-xl flex justify-center items-center bg-y ${styles.swiperArrow}`}>
                                 <img src={index !== 0 ? nextArrow : prevArrow} className="w-5 h-5" alt="buttonArrow" />
                             </button>
                         ))}
@@ -40,7 +41,6 @@ const Reviews = (props) => {
                      onSwiper={(swiper) => {
                         swiper.params.navigation.nextEl = nextButton.current
                         swiper.params.navigation.prevEl = prevButton.current
-
                         swiper.navigation.init();
                      }}                     
                      direction="horizontal" 
@@ -48,7 +48,8 @@ const Reviews = (props) => {
                      className="!flex reviews-slider">
                         {
                             reviewsData.map((review) =>  (
-                                <SwiperSlide className="!w-[400px] py-[1.125rem] px-5 bg-dark rounded-[10px] ms:px-4 ms:!w-[350px]" key={review.id}>
+                                <SwiperSlide 
+                                className="!w-[400px] py-[1.125rem] px-5 bg-dark rounded-[10px] ms:px-4 ms:!w-[350px]" key={review.id}>
                                     <div className="flex flex-col">
                                         <div className="flex-1 mb-5 flex">
                                             <p className=" text-zinc-100 opacity-[.99] flex-1 text-sm leading-[135%] ms:text-xs">
